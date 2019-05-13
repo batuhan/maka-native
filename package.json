@@ -11,6 +11,8 @@
     "@types/styled-components": "^4.1.14",
     "react": "16.8.3",
     "react-native": "0.59.8",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-navigation": "^3.9.1",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
