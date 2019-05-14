@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Rendering should match to snapshot 1`] = `
+<div>
+  <div>
+    Container Children
+  </div>
+</div>
+`;

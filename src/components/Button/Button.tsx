@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { View, TouchableHighlight, GestureResponderEvent } from "react-native";
+import { View, TouchableHighlight } from "react-native";
 import styled from "styled-components";
 
 interface Props {
