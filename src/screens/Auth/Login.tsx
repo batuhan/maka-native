@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text, Alert } from "react-native";
+import { View, Text } from "react-native";
+import { connect } from "react-redux";
 
-import strings from "../config/strings";
+import { fetchLoginRequest } from "../../modules/auth/actions";
+import strings from "../../config/strings";
 
-import Button from "../components/Button/Button";
-import FormInput from "../components/FormInput/FormInput";
+import Button from "../../components/Button/Button";
+import FormInput from "../../components/FormInput/FormInput";
+import { string } from "prop-types";
 
 interface State {
   email: string;
@@ -30,11 +33,14 @@ class LoginScreen extends React.Component<{}, State> {
   };
 
   handleLoginPress = () => {
-    console.log("press login");
+    const { login }: any = this.props;
+    const { email, password } = this.state;
+    login(email, password);
   };
 
   render() {
     const { email, password } = this.state;
+    console.log(this.props);
     return (
       <View>
         <FormInput
@@ -55,4 +61,19 @@ class LoginScreen extends React.Component<{}, State> {
   }
 }
 
-export default LoginScreen;
+const mapStateToProps = (response: any) => {
+  return response.authReducer;
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    login: (email: string, password: string) => {
+      dispatch(fetchLoginRequest({ email, password }));
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginScreen);
