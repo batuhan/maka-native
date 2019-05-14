@@ -3,7 +3,7 @@ import { View, TouchableHighlight, GestureResponderEvent } from "react-native";
 import styled from "styled-components";
 
 interface Props {
-  onPress?: () => GestureResponderEvent;
+  onPress?: () => void;
   children: ReactNode;
 }
 

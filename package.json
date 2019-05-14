@@ -8,12 +8,21 @@
     "storybook": "watch rnstl ./src --wait=100 | storybook start | yarn start --projectRoot storybook --watchFolders $PWD"
   },
   "dependencies": {
+    "@types/enzyme": "^3.9.2",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/react-redux": "^7.0.9",
     "@types/styled-components": "^4.1.14",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
     "react": "16.8.3",
     "react-native": "0.59.8",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-navigation": "^3.9.1",
+    "react-redux": "^7.0.3",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "typesafe-actions": "^4.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -33,13 +42,15 @@
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.0",
     "prop-types": "^15.7.2",
-    "react-dom": "16.8.3",
     "react-native-storybook-loader": "^1.8.0",
     "react-test-renderer": "16.8.3",
     "typescript": "^3.4.5"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./tests/Setup.js"
+    ]
   },
   "config": {
     "react-native-storybook-loader": {
