@@ -9,36 +9,14 @@
  */
 
 import React, { Component } from "react";
-import { AppRegistry, StyleSheet, View, StatusBar } from "react-native";
-
-import AppNavigator from "./navigation/AppNavigator";
-import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import rootReducer from "./redux/reducers";
-import createSagaMiddleware from "redux-saga";
 
-import rootSaga from "./redux/sagas";
+import createStore from "./store";
 
-const configureStore = () => {
-  const sagaMiddleware = createSagaMiddleware();
-
-  const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
-
-  sagaMiddleware.run(rootSaga, store.dispatch);
-
-  return { store };
-};
-
-const { store } = configureStore();
+import Index from "./screens/";
+const store = createStore();
 
 interface Props {}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff"
-  }
-});
 
 export default class App extends Component<Props> {
   state = {
@@ -48,10 +26,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <StatusBar barStyle="default" />
-          <AppNavigator />
-        </View>
+        <Index />
       </Provider>
     );
   }

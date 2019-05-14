@@ -1,6 +1,6 @@
 import React from "react";
 
-import LoginScreen from "../screens/Login";
+import ProfileScreen from "../screens/Auth";
 import HomeScreen from "../screens/Home";
 
 import {
@@ -17,11 +17,11 @@ export const HomeStack = createStackNavigator({
   }
 });
 
-export const LoginStack = createStackNavigator({
+export const ProfileStack = createStackNavigator({
   Login: {
-    screen: LoginScreen,
+    screen: ProfileScreen,
     navigationOptions: {
-      title: "Login"
+      title: "Profile"
     }
   }
 });
@@ -29,7 +29,7 @@ export const LoginStack = createStackNavigator({
 export default createBottomTabNavigator(
   {
     HomeStack,
-    LoginStack
+    ProfileStack
   },
   {
     swipeEnabled: false,
