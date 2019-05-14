@@ -1,0 +1,25 @@
+export const LOGIN_REQUEST = "LOGIN_REQUEST";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILURE = "LOGIN_FAILURE";
+
+export const REGISTER_REQUEST = "REGISTER_REQUEST";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAILURE = "REGISTER_FAILURE";
+
+export const LOGOUT = "LOGOUT";
+
+export interface AuthState {
+  loading?: boolean;
+  data: any;
+  errors?: string;
+}
+
+export enum AuthActionTypes {
+  LOGIN_REQUEST = "LOGIN_REQUEST",
+  LOGIN_SUCCESS = "LOGIN_SUCCESS",
+  LOGIN_FAILURE = "LOGIN_FAILURE",
+  REGISTER_REQUEST = "REGISTER_REQUEST",
+  REGISTER_SUCCESS = "REGISTER_SUCCESS",
+  REGISTER_FAILURE = "REGISTER_FAILURE",
+  LOGOUT = "LOGOUT"
+}
