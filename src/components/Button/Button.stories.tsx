@@ -7,7 +7,7 @@ import { storiesOf } from "@storybook/react-native";
 import Button from "./Button";
 
 storiesOf("Button", module).add("Button", () => (
-  <Button>
+  <Button onPress={() => {}}>
     <Text>Button</Text>
   </Button>
 ));
