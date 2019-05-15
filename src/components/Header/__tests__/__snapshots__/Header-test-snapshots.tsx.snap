@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    Header Logo
+  </Text>
+  <Text>
+    Header Title
+  </Text>
+</View>
+`;
