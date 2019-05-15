@@ -8,15 +8,6 @@ import Button from "../Button";
 import { TextInput, View } from "react-native";
 
 describe("Button", () => {
-  //remove react-dom error on test console
-  const origConsole = console.error;
-  beforeEach(() => {
-    console.error = () => {};
-  });
-  afterEach(() => {
-    console.error = origConsole;
-  });
-
   const children = <TextInput />;
   const onPress = jest.fn();
 
