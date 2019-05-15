@@ -23,15 +23,17 @@ describe("Button", () => {
   describe("Rendering", () => {
     it("should render given children", () => {
       const component = shallow(<Button onPress={onPress}>{children}</Button>);
+
       expect(component.contains(children)).toEqual(true);
     });
 
-    it("should render div element", () => {
+    it("should render view element", () => {
       const component = mount(<Button onPress={onPress}>{children}</Button>);
       const tree = component
         .children()
         .first()
         .html();
+
       expect(tree).toContain("view");
       expect(tree).toContain("textinput");
     });
@@ -40,6 +42,7 @@ describe("Button", () => {
       onPress.mockReturnValue("trigger on press");
       const wrapper = shallow(<Button onPress={onPress}>{children}</Button>);
       wrapper.simulate("press");
+
       expect(onPress.mock.calls.length).toBe(1);
     });
   });
