@@ -7,6 +7,6 @@ interface Props {
   source: string;
 }
 
-export default function HeaderComponent({ source, style }: Props) {
+export default function ImageComponent({ source, style }: Props) {
   return <Image style={style} source={require(source)} />;
 }
