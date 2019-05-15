@@ -7,7 +7,6 @@ import strings from "../../config/strings";
 
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
-import { string } from "prop-types";
 
 interface State {
   email: string;
@@ -40,7 +39,6 @@ class LoginScreen extends React.Component<{}, State> {
 
   render() {
     const { email, password } = this.state;
-    console.log(this.props);
     return (
       <View>
         <FormInput
