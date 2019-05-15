@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders correctly 1`] = `
+<RCTSwitch
+  accessibilityRole="button"
+  disabled={false}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "height": 31,
+      "width": 51,
+    }
+  }
+  value={false}
+/>
+`;
