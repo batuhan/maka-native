@@ -3,9 +3,11 @@
  */
 
 import React from "react";
+import { TextInput } from "react-native";
 import { shallow, mount } from "enzyme";
+
 import Button from "../Button";
-import { TextInput, View } from "react-native";
+
 
 describe("Button", () => {
   const children = <TextInput />;
