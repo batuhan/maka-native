@@ -13,15 +13,15 @@ const createTestProps = (props: Object) => ({
 });
 
 describe("App", () => {
-  let wrapper: ShallowWrapper;
-  let props: any; // use type "any" to opt-out of type-checking
-  beforeEach(() => {
-    props = createTestProps({});
-    wrapper = shallow(<App {...props} />); // no compile-time error
-  });
-  describe("rendering", () => {
-    it("should render a <View />", () => {
-      console.log(wrapper);
-    });
-  });
+  // let wrapper: ShallowWrapper;
+  // let props: any; // use type "any" to opt-out of type-checking
+  // beforeEach(() => {
+  //   props = createTestProps({});
+  //   wrapper = shallow(<App {...props} />); // no compile-time error
+  // });
+  // describe("rendering", () => {
+  //   it("should render a <View />", () => {
+  //     console.log(wrapper);
+  //   });
+  // });
 });

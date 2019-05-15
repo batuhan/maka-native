@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Container Rendering should match to snapshot 1`] = `
-<View>
+.c0 {
+  background-color: white;
+}
+
+<View
+  className="c0"
+>
   <Text>
     Container Children
   </Text>
