@@ -1,7 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
-import Header from "../Header";
 import { Text } from "react-native";
+
+import Header from "../Header";
 
 describe("Header", () => {
   describe("Rendering", () => {
