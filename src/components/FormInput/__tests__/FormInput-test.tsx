@@ -1,16 +1,18 @@
 import React from "react";
-import { TextInputProps } from "react-native";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import FormInput from "../FormInput";
-import renderer from "react-test-renderer";
+
 describe("FormInput", () => {
   describe("Rendering", () => {
-    it("should match to snapshot", () => {
+    it("should render placeholder", () => {
       const placeholder = "form input placeholder";
-      const tree = renderer
-        .create(<FormInput placeholder={placeholder} />)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const component = mount(<FormInput placeholder={placeholder} />);
+      const tree = component
+        .children()
+        .first()
+        .html();
+      expect(tree).toContain("textinput");
+      expect(tree).toContain(placeholder);
     });
   });
 });

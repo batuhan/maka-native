@@ -2,15 +2,15 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { Text } from "react-native";
 
-import Button from "../Button";
+import Header from "../Header";
 
-describe("Button", () => {
+describe("Header", () => {
   it("renders correctly", () => {
-    const onPress = () => {};
+    const title = "Header Title";
     const instance = renderer.create(
-      <Button style={{}} onPress={onPress}>
-        <Text>Touchable</Text>
-      </Button>
+      <Header style={{}} title={title}>
+        <Text>Header Logo</Text>
+      </Header>
     );
     expect(instance.toJSON()).toMatchSnapshot();
   });
