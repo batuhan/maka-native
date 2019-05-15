@@ -1,13 +1,23 @@
-/**
- * @format
- */
-
-import "react-native";
+import App from "../screens/";
+import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import App from "../screens/index";
+import { View } from "react-native";
 
-import renderer from "react-test-renderer";
+const createTestProps = (props: Object) => ({
+  ...props
+});
 
-// it("renders correctly", () => {
-//   renderer.create(<App />);
-// });
+describe("App", () => {
+  describe("rendering", () => {
+    let wrapper: ShallowWrapper;
+    let props: Object;
+    beforeEach(() => {
+      props = createTestProps({});
+      wrapper = shallow(<App {...props} />);
+    });
+
+    it("should render a <View />", () => {
+      expect(wrapper.find(View)).toHaveLength(1);
+    });
+  });
+});

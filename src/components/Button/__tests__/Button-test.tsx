@@ -1,17 +1,46 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Button from "../Button";
-import { Text } from "react-native";
-import renderer from "react-test-renderer";
+import { TextInput, View } from "react-native";
 
 describe("Button", () => {
+  //remove react-dom error on test console
+  const origConsole = console.error;
+  beforeEach(() => {
+    console.error = () => {};
+  });
+  afterEach(() => {
+    console.error = origConsole;
+  });
+
+  const children = <TextInput />;
+  const onPress = jest.fn();
+
   describe("Rendering", () => {
-    it("should match to snapshot", () => {
-      const children = <Text>Button Children</Text>;
-      const tree = renderer
-        .create(<Button onPress={() => {}}>{children}</Button>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+    it("should render given children", () => {
+      const component = shallow(<Button onPress={onPress}>{children}</Button>);
+      expect(component.contains(children)).toEqual(true);
+    });
+
+    it("should render div element", () => {
+      const component = mount(<Button onPress={onPress}>{children}</Button>);
+      const tree = component
+        .children()
+        .first()
+        .html();
+      expect(tree).toContain("view");
+      expect(tree).toContain("textinput");
+    });
+
+    it("should trigger onPress event", () => {
+      onPress.mockReturnValue("trigger on press");
+      const wrapper = shallow(<Button onPress={onPress}>{children}</Button>);
+      wrapper.simulate("press");
+      expect(onPress.mock.calls.length).toBe(1);
     });
   });
 });

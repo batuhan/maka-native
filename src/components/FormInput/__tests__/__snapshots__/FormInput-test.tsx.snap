@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FormInput Rendering should match to snapshot 1`] = `<div />`;
+exports[`FormInput Rendering should match to snapshot 1`] = `
+<TextInput
+  allowFontScaling={true}
+  placeholder="form input placeholder"
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "borderBottomWidth": 0.5,
+        "height": 40,
+        "marginBottom": 20,
+      },
+      undefined,
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;

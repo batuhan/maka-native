@@ -1,12 +1,17 @@
 import React, { ReactNode } from "react";
-import { View, TouchableHighlight } from "react-native";
+import { TouchableHighlight } from "react-native";
 import styled from "styled-components";
 
 interface Props {
-  onPress?: () => void;
+  onPress: () => void;
+  style?: {};
   children: ReactNode;
 }
 
-export default function Button({ onPress, children }: Props) {
-  return <TouchableHighlight onPress={onPress}>{children}</TouchableHighlight>;
+export default function ButtonComponent({ onPress, children, style }: Props) {
+  return (
+    <TouchableHighlight style={style} onPress={onPress}>
+      {children}
+    </TouchableHighlight>
+  );
 }
