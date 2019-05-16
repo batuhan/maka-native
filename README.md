@@ -80,10 +80,12 @@ Code here is released under the [MIT license](LICENSE).
 
 ### [NOD.DIGITAL](https://nod.digital/?ref=_nod-github_)
 
-<a target="_blank" href="https://barbar.digital/?ref=vortigern-barbar-logo"><img src="https://barbaruploads.s3.amazonaws.com/bicoz/logo2x.png" height="55px" /></a>
+<a target="_blank" href="https://nod.digital/images/logo.png" height="55px" /></a>
 
-We help startups start and stay started by helping them plan, strategize, fund and execute their vision. 
+We help you plan, design & build your digital products.
 
-Don't hesitate to contact us at [hey@barbar.digital](mailto:hey@barbar.digital)
+We've been helping our clients turn their ideas into products since 2014.
+
+Don't hesitate to contact us at [hey@nod.digital](mailto:hey@nod.digital)
 
 If you are looking to work with the stack used in this project, you might consider [joining us](https://nod.digital/join-us).
