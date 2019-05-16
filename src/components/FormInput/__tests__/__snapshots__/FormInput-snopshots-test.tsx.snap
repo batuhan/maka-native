@@ -3,6 +3,7 @@
 exports[`FormInput Rendering should match to snapshot 1`] = `
 <TextInput
   allowFontScaling={true}
+  onChangeText={[Function]}
   placeholder="form input placeholder"
   rejectResponderTermination={true}
   style={

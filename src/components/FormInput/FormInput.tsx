@@ -1,12 +1,27 @@
 import React from "react";
-import { StyleSheet, TextInput, TextInputProps } from "react-native";
+import { StyleSheet, TextInput } from "react-native";
 
-type Props = TextInputProps;
+type Props = {
+  error?: string;
+  value?: string;
+  onChangeText: (name: string, value: string) => void;
+  style?: {};
+  name: string;
+  placeholder: string;
+};
 
 class FormInput extends React.Component<Props> {
   render() {
-    const { style, ...otherProps } = this.props;
-    return <TextInput style={[styles.textInput, style]} {...otherProps} />;
+    //handle error
+    const { style, error, value, onChangeText, name, placeholder } = this.props;
+    return (
+      <TextInput
+        style={[styles.textInput, style]}
+        value={value}
+        placeholder={placeholder}
+        onChangeText={(value: string) => onChangeText(name, value)}
+      />
+    );
   }
 }
 

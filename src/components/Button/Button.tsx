@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
-import { TouchableHighlight } from "react-native";
+import { TouchableHighlight, GestureResponderEvent } from "react-native";
 import styled from "styled-components";
 
 interface Props {
-  onPress: () => void;
+  onPress: (event: any) => void;
   style?: {};
   children: ReactNode;
 }

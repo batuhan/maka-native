@@ -7,8 +7,8 @@ interface UseFormProps {
 }
 
 const useForm = (callback: any, validate: any) => {
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
+  const [values, setValues] = useState<any>({});
+  const [errors, setErrors] = useState<any>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -17,17 +17,16 @@ const useForm = (callback: any, validate: any) => {
     }
   }, [errors]);
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: any): void => {
     if (event) event.preventDefault();
     setErrors(validate(values));
     setIsSubmitting(true);
   };
 
-  const handleChange = (event: any) => {
-    event.persist();
-    setValues(values => ({
+  const handleChange = (name: string, value: string) => {
+    setValues((values: any) => ({
       ...values,
-      [event.target.name]: event.target.value
+      [name]: value
     }));
   };
 
