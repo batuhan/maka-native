@@ -2,62 +2,43 @@ import React from "react";
 import { View, Text } from "react-native";
 import { connect } from "react-redux";
 
+import useForm from "../../lib/components/useForm";
+import validate from "../../lib/validations/loginForm";
+
 import { fetchLoginRequest } from "../../modules/auth/actions";
 import strings from "../../config/strings";
 
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
 
-interface State {
-  email: string;
-  password: string;
-}
+const LoginScreen = ({ login }: { login: () => void }) => {
+  const { values, errors, handleChange, handleSubmit } = useForm(
+    login,
+    validate
+  );
 
-class LoginScreen extends React.Component<{}, State> {
-  readonly state: State = {
-    email: "",
-    password: ""
-  };
-
-  handleEmailChange = (email: string) => {
-    this.setState({
-      email
-    });
-  };
-
-  handlePasswordChange = (password: string) => {
-    this.setState({
-      password
-    });
-  };
-
-  handleLoginPress = () => {
-    const { login }: any = this.props;
-    const { email, password } = this.state;
-    login(email, password);
-  };
-
-  render() {
-    const { email, password } = this.state;
-    return (
-      <View>
-        <FormInput
-          value={email}
-          onChangeText={this.handleEmailChange}
-          placeholder={strings.EMAIL_PLACEHOLDER}
-        />
-        <FormInput
-          value={password}
-          onChangeText={this.handlePasswordChange}
-          placeholder={strings.PASSWORD_PLACEHOLDER}
-        />
-        <Button onPress={this.handleLoginPress}>
-          <Text>{strings.LOGIN}</Text>
-        </Button>
-      </View>
-    );
-  }
-}
+  return (
+    <View>
+      <FormInput
+        name="email"
+        value={values.email}
+        error={errors.email}
+        onChangeText={handleChange}
+        placeholder={strings.EMAIL_PLACEHOLDER}
+      />
+      <FormInput
+        name="password"
+        value={values.password}
+        error={values.password}
+        onChangeText={handleChange}
+        placeholder={strings.PASSWORD_PLACEHOLDER}
+      />
+      <Button onPress={handleSubmit}>
+        <Text>{strings.LOGIN}</Text>
+      </Button>
+    </View>
+  );
+};
 
 const mapStateToProps = (response: any) => {
   return response.authReducer;
