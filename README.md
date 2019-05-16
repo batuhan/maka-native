@@ -84,4 +84,4 @@ We plan, design & build digital products. We've been helping our clients turn th
 
 If you are looking to work with the stack used in this project, you might consider [joining us](https://nod.digital/join-us). Don't hesitate to contact us for anything via [hey@nod.digital](mailto:hey@nod.digital).
 
-<img src="https://nod.digital/images/logo.png" height="25px" />
+<img src="https://nod.digital/images/logos/nodgroup-mini.png" height="25px" />
