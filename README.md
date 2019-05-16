@@ -75,18 +75,13 @@ Code here is released under the [MIT license](LICENSE).
 ### Contributors
 
 - F. Batuhan Icoz, _Founder_ at NOD
-- Batuhan  Ozgur Ozdemir, __ at NOD
+- Batuhan Ozgur Ozdemir, _Software_ at NOD
 
 
 ### [NOD.DIGITAL](https://nod.digital/?ref=_nod-github_)
 
+We plan, design & build digital products. We've been helping our clients turn their ideas into products since 2014.
 
-We help you plan, design & build your digital products.
-
-We've been helping our clients turn their ideas into products since 2014.
-
-Don't hesitate to contact us at [hey@nod.digital](mailto:hey@nod.digital)
-
-If you are looking to work with the stack used in this project, you might consider [joining us](https://nod.digital/join-us).
+If you are looking to work with the stack used in this project, you might consider [joining us](https://nod.digital/join-us). Don't hesitate to contact us for anything via [hey@nod.digital](mailto:hey@nod.digital).
 
 <img src="https://nod.digital/images/logo.png" height="25px" />
