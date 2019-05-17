@@ -1,38 +1,44 @@
 import React from "react";
 
-import ProfileScreen from "../screens/Auth";
-import HomeScreen from "../screens/Home";
+import { Login, Register } from "../screens/Auth";
+import Home from "../screens/Home";
 
 import {
   createBottomTabNavigator,
-  createStackNavigator
+  createStackNavigator,
+  createDrawerNavigator
 } from "react-navigation";
 
-export const HomeStack = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: {
-      title: "Home"
-    }
-  }
-});
-
-export const ProfileStack = createStackNavigator({
-  Login: {
-    screen: ProfileScreen,
-    navigationOptions: {
-      title: "Profile"
-    }
-  }
-});
-
-export default createBottomTabNavigator(
+const AuthNavigator = createStackNavigator(
   {
-    HomeStack,
-    ProfileStack
+    Login: { screen: Login },
+    Register: { screen: Register }
   },
   {
-    swipeEnabled: false,
-    animationEnabled: false
+    headerMode: "none"
   }
 );
+
+const HomeStackNavigator = createStackNavigator({
+  Home: { screen: Home }
+});
+
+const AppNavigator = createDrawerNavigator(
+  {
+    Home: { screen: HomeStackNavigator }
+  },
+  {
+    // contentComponent: Home
+  }
+);
+const BottomNavigator = createBottomTabNavigator(
+  {
+    Home: AppNavigator,
+    Profile: AuthNavigator
+  },
+  {
+    initialRouteName: "Home"
+  }
+);
+
+export default BottomNavigator;

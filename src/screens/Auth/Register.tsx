@@ -11,7 +11,13 @@ import strings from "../../config/strings";
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
 
-const RegisterScreen = ({ register }: { register: () => void }) => {
+const RegisterScreen = ({
+  register,
+  navigation
+}: {
+  register: () => void;
+  navigation: any;
+}) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     register,
     validate
@@ -43,6 +49,13 @@ const RegisterScreen = ({ register }: { register: () => void }) => {
       <Button onPress={handleSubmit}>
         <Text>{strings.REGISTER}</Text>
       </Button>
+      <Button
+        onPress={() => {
+          navigation.push("Login");
+        }}
+      >
+        <Text>Already have an account? Sign in!</Text>
+      </Button>
     </View>
   );
 };
@@ -51,11 +64,13 @@ const mapStateToProps = (response: any) => {
   return response.authReducer;
 };
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, props: any) => {
   return {
-    register: (email: string, password: string, fullname: string) => {
+    register: (data: { email: string; password: string; fullname: string }) => {
+      const { email, password, fullname } = data;
       dispatch(fetchRegisterRequest({ email, password, fullname }));
-    }
+    },
+    navigation: props.navigation
   };
 };
 

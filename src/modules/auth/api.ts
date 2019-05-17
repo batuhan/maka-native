@@ -12,10 +12,11 @@ const login = (email: string, password: string) => {
   };
 };
 
-const register = (email: string, password: string) => {
+const register = (email: string, password: string, fullname: string) => {
   //call api
   const profile = {
-    email
+    email,
+    fullname
   };
   const idToken = "token";
 
