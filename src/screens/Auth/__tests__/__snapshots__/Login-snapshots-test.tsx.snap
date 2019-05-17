@@ -53,5 +53,22 @@ exports[`Login renders correctly 1`] = `
       Log In
     </Text>
   </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <Text
+      style={null}
+    >
+      Dont have an account? Join here !
+    </Text>
+  </View>
 </View>
 `;

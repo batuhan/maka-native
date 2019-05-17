@@ -10,19 +10,22 @@ type Props = {
   placeholder: string;
 };
 
-class FormInput extends React.Component<Props> {
-  render() {
-    //handle error
-    const { style, error, value, onChangeText, name, placeholder } = this.props;
-    return (
-      <TextInput
-        style={[styles.textInput, style]}
-        value={value}
-        placeholder={placeholder}
-        onChangeText={(value: string) => onChangeText(name, value)}
-      />
-    );
-  }
+export default function FormInput({
+  style,
+  error,
+  value,
+  onChangeText,
+  name,
+  placeholder
+}: Props) {
+  return (
+    <TextInput
+      style={[styles.textInput, style]}
+      value={value}
+      placeholder={placeholder}
+      onChangeText={(value: string) => onChangeText(name, value)}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
@@ -32,5 +35,3 @@ const styles = StyleSheet.create({
     marginBottom: 20
   }
 });
-
-export default FormInput;

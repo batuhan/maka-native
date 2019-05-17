@@ -71,6 +71,23 @@ Array [
         Register
       </Text>
     </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <Text
+        style={null}
+      >
+        Already have an account? Sign in!
+      </Text>
+    </View>
   </View>,
   " ",
 ]

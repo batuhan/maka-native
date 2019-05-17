@@ -17,7 +17,7 @@ exports[`DatePickerIos Rendering should match to snapshot 1`] = `
   }
 >
   <Text>
-    Thu May 16 2019
+    Fri May 17 2019
   </Text>
 </View>
 `;
