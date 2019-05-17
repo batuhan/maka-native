@@ -1,87 +1,82 @@
-# React Native Starter
+# Maka Native
+[![Dependency Status](https://david-dm.org/nodgroup/maka-native.svg)]()
+[![devDependency Status](https://david-dm.org/nodgroup/maka-native/dev-status.svg)]()
+[![Code Climate](https://codeclimate.com/github/nodgroup/maka-native/badges/gpa.svg)](https://codeclimate.com/github/nodgroup/maka-native)
+[![GitHub issues](https://img.shields.io/github/issues/nodgroup/maka-native.svg)](https://github.com/nodgroup/maka-native/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nodgroup/maka-native/master/LICENSE)
+___
 
-This is an opionated starter for React Native, styled-components & Redux (among other things). 
+Maka Native is an opinionated boilerplate for crafting React Native-powered mobile applications with TypeScript, redux, redux-saga, styled-components, storybooks & more. Since it's meant as a starting point for new apps, it uses no class components and relies heavily on the Hooks pattern. 
+
+[![TypeScript](https://cdn.nod.li/vorti/typescript.png)](https://www.typescriptlang.org/) 
+[![React](https://cdn.nod.li/vorti/react.png)](https://github.com/facebook/react) 
+[![Redux](https://cdn.nod.li/vorti/redux.png)](https://github.com/reactjs/redux)
 
 ## Requirements
 Before start, make sure you installed:
 
 - [Node](https://nodejs.org) and [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html): React Native Dev Environment
+- [Xcode](https://developer.apple.com/xcode/), [CocoaPods](https://cocoapods.org/): iOS Dev Environment
+- [Android Studio](https://developer.android.com/studio/index.html): Android Dev Environment
 
-
-- [Xcode](https://developer.apple.com/xcode/), [CocoaPods](https://cocoapods.org/) : iOS Dev Environment
-- [Android Studio](https://developer.android.com/studio/index.html) : Android Dev Environment
-- [FBSDK](https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip): Download the SDK and unzip the archive to `~/Documents/FacebookSDK`.
+We also prefer [Yarn](https://yarnpkg.com/lang/en/) but it's not required. Feel free to swap `yarn` to `npm` in the instructions below. 
 
 ## Project structure
 
 - [assets](./src/assets): Everything static like fonts, images, videos or static HTML files you may have goes here
     - [assets/fonts](./src/assets/auth): This is where you’ll find the functions like sign-in, sign-out
     - [assets/images](./src/assets/images): This is where you’ll find the functions like sign-in, sign-out
-    - [assets/html](./src/assets/html): This is where you’ll find the functions like sign-in, sign-out
-
-- [components](./src/components): Stateless React components we use trough the app 
-- [modules](./src/modules): Any code that’s used in multiple places or the ones not directly engaging with the view layer should be here.
-    - [modules/auth](./src/modules/auth): This is where you’ll find the functions like sign-in, sign-out
-    - [modules/firebase](./src/modules/firebase): Put Firebase-related functions here
-    - [modules/fcm](./src/modules/fcm): Firebase Cloud Messages-related functions are here
-    - [modules/sagas](./src/modules/sagas): Generic sagas or helpers for sagas
-    - [modules/style](./src/modules/style): Put common styles in here
-    - [modules/utils](./src/modules/utils): Utility functions should be here
-- [scenes](./src/scenes): Containers of the scenes are here. Also the routes are created in the index file of this directory. Some scenes have sub scenes in them, you’ll the containers for them inside the main scene.
+    - [assets/html](./src/assets/html): Any static page you'll use in a WebView goes here
+- [components](./src/components): Stateless React components you'll use through the app. We even added a few common components for you. 
+    - [components/Alert](./src/components/Alert)
+    - [components/Button](./src/components/Button)
+    - [components/Container](./src/components/Container)
+    - [components/DatePicker](./src/components/DatePicker)
+    - [components/FormInput](./src/components/FormInput)
+    - [components/Header](./src/components/Header)
+    - [components/Image](./src/components/Image)
+    - [components/List](./src/components/List)
+    - [components/Select](./src/components/Select)
+    - [components/Spinner](./src/components/Spinner)
+    - [components/Switch](./src/components/Switch)
+- [modules](./src/modules): Any code that’s used in multiple places or the ones not directly engaging with the view layer should be here. See the section below to find out how we structure modules.
+    - [modules/auth](./src/modules/auth)
+    - [modules/user](./src/modules/user)
+- [screens](./src/screens): Screens are like containers but for native applications.
 - [modules](./src/modules): Redux modules. Details are explained in the next section.
+- [storybook](./storybook): Storybooks.
 - [store](./src/store): Redux-related code are kept here.
 - [Setup.js](./src/Setup.js): Where we connect the store and setup React. We also configure Microsoft’s code-push here.
 - [App.js](./src/App.js): The main React component is here. Try to keep it stateless. 
 
-### Module structure 
+### Modules & module structures in Maka 
 
-A module usually has these files in it, they are required to have an index file. Never keep a functions itself in that file tho, keep it in other files (as explained below). Try to keep modules separate and independent. Only exports things you’ll use outside of the file. Exports things that will be used outside of the module from the index.
+Modules are generally indepedent blocks for certain functionality. They are meant to be portable, small and functional pieces of code you can use in multiple applications, even those not using React. 
 
 - **api.js**: async functions to use mainly in Sagas
 - **sagas.js**: Saga’s related to the module, only export
-- **reducer.js**: Redux reducer
+- **reducer.js**: Redux reducer (try to have a single reducer in each module)
 - **subscribers.js**: Event channels for Saga
 - **actions.js**: Pure Redux actions
+- **hooks.js**: Hooks for React
+- **types.js**: TypeScript types
 
-## Running development version
+## License & Credits
 
-To run it in Xcode you’ll first need to complete the [Step 3 of installing Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started).
-Also make sure to have Cocoapods installed on your Mac also using yarn instead of NPM is recommended since we have a lock file for yarn in the project.
+All open source code released by NOD are under the [MIT license](LICENSE). 
 
-* Install dependencies 
+### Core Contributors
 
-  ```bash
-  $ yarn # or npm install if that's your thing
-  $ cd ios && pods install
-  ```
+- [Batuhan Özgür Özdemir](https://github.com/BatuhanW)
+- [Eda Bulut Ağırman](https://github.com/clouditable)
+- [Batuhan İçöz](https://github.com/batuhan)
 
-* Open `ios/Proco.xcworkspace` with Xcode.
-* Select the device you want to run on (if you connect a real device via USB, it'll appear on the list) ([Screenshot](https://cloud.githubusercontent.com/assets/698079/20267596/20b61b60-aa84-11e6-8959-13489e930f10.png))
-  
-This will fire a Terminal and run react-native's packager. You should keep the packager running for app to be able to run on the device (or simulator). If you don't like Macos' default Terminal app, you can run the packager manually by
+See also the [list of contributors](https://github.com/nodgroup/maka-native/graphs/contributors) who participated in this project.
 
-  ```bash
-  $ npm start 
-  # If you have problems with imports, try
-  $ npm start -- --reset-cache
-  ```
+### [NOD.DIGITAL](https://nod.digital/?ref=_nod-github-moka-native_)
 
+Primarily focused on media & adtech, NOD.DIGITAL is a digital product studio from Istanbul.
 
-## Credits
+If you like working with the same stack we do, you might consider [joining us](https://nod.digital/join-us). Never hesitate to contact us for anything via [hey@nod.digital](mailto:hey@nod.digital).
 
-Code here is released under the [MIT license](LICENSE). 
-
-
-### Contributors
-
-- F. Batuhan Icoz, _Founder_ at NOD
-- Batuhan Ozgur Ozdemir, _Software_ at NOD
-
-
-### [NOD.DIGITAL](https://nod.digital/?ref=_nod-github_)
-
-We plan, design & build digital products. We've been helping our clients turn their ideas into products since 2014.
-
-If you are looking to work with the stack used in this project, you might consider [joining us](https://nod.digital/join-us). Don't hesitate to contact us for anything via [hey@nod.digital](mailto:hey@nod.digital).
-
-<img src="https://nod.digital/images/logos/nodgroup-mini.png" height="25px" />
+<img src="https://nod.digital/images/logos/nodgroup-mini.png" height="20px" />
