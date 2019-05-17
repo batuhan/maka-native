@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, TextInput } from "react-native";
 
+import styled from "styled-components";
+
 type Props = {
   error?: string;
   value?: string;

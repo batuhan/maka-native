@@ -1,7 +1,6 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { ListItem, ListItemProps } from "react-native-elements";
 
-import { TouchableHighlight } from "react-native";
 import styled from "styled-components";
 
 interface Props {
