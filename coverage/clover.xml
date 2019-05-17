@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558031990702" clover="3.2.0">
-  <project timestamp="1558031990703" name="All files">
-    <metrics statements="121" coveredstatements="70" conditionals="44" coveredconditionals="11" methods="41" coveredmethods="23" elements="206" coveredelements="104" complexity="0" loc="121" ncloc="121" packages="17" files="21" classes="21"/>
+<coverage generated="1558103651087" clover="3.2.0">
+  <project timestamp="1558103651088" name="All files">
+    <metrics statements="141" coveredstatements="110" conditionals="66" coveredconditionals="43" methods="48" coveredmethods="34" elements="255" coveredelements="187" complexity="0" loc="141" ncloc="141" packages="19" files="27" classes="27"/>
     <package name="assets.images">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="image-test.jpg" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/assets/images/image-test.jpg">
@@ -20,7 +20,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Button.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/components/Button/Button.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="12" count="8" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
       </file>
     </package>
     <package name="components.Container">
@@ -61,13 +61,12 @@
       </file>
     </package>
     <package name="components.FormInput">
-      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="FormInput.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/components/FormInput/FormInput.tsx">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="16" count="12" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="28" count="6" type="stmt"/>
+        <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="23" count="14" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
       </file>
     </package>
     <package name="components.Header">
@@ -82,6 +81,21 @@
       <file name="Image.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/components/Image/Image.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.List">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="List.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/components/List/List.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="1" falsecount="1"/>
+      </file>
+    </package>
+    <package name="components.List.ListItem">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ListItem.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/components/List/ListItem/ListItem.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="6" type="stmt"/>
       </file>
     </package>
     <package name="components.Select">
@@ -108,79 +122,106 @@
       </file>
     </package>
     <package name="config">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="errors.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/config/errors.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
+      <file name="inAppConfigs.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/config/inAppConfigs.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
       <file name="strings.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/config/strings.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
       </file>
     </package>
     <package name="lib.components">
-      <metrics statements="14" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="2"/>
+      <metrics statements="14" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="4"/>
       <file name="useForm.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/components/useForm.tsx">
-        <metrics statements="14" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="2"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="15" count="2" type="cond" truecount="3" falsecount="1"/>
+        <metrics statements="14" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="4"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="3" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
         <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
       </file>
     </package>
     <package name="lib.functions">
-      <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+      <file name="configs.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/functions/configs.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="25" type="stmt"/>
+      </file>
+      <file name="errors.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/functions/errors.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="18" type="cond" truecount="3" falsecount="0"/>
+      </file>
       <file name="regex.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/functions/regex.ts">
-        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="3" falsecount="0"/>
       </file>
     </package>
     <package name="lib.validations">
-      <metrics statements="28" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="34" coveredstatements="24" conditionals="28" coveredconditionals="17" methods="2" coveredmethods="2"/>
       <file name="loginForm.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/validations/loginForm.ts">
-        <metrics statements="10" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="1" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
+        <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
       </file>
       <file name="registerForm.ts" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/lib/validations/registerForm.ts">
-        <metrics statements="18" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="23" coveredstatements="15" conditionals="20" coveredconditionals="11" methods="1" coveredmethods="1"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="cond" truecount="1" falsecount="1"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
       </file>
     </package>
     <package name="modules.auth">
@@ -213,28 +254,31 @@
       </file>
     </package>
     <package name="screens.Auth">
-      <metrics statements="16" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+      <metrics statements="19" coveredstatements="14" conditionals="3" coveredconditionals="2" methods="10" coveredmethods="6"/>
       <file name="Login.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/screens/Auth/Login.tsx">
-        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
       </file>
       <file name="Register.tsx" path="/home/bulut/apps/personal/e-haber/starter-react-native/src/screens/Auth/Register.tsx">
-        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="7" conditionals="3" coveredconditionals="2" methods="5" coveredmethods="3"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
       </file>
     </package>
   </project>

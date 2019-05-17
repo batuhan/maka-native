@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">81.82% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>9/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">81.82% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>9/11</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -64,41 +64,53 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { emailRegexTest } from "../functions/regex";
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getFormError } from "../functions/errors";
+import { emailRegexTest } from "../functions/regex";
+import { getInAppConfigs } from "../functions/configs";
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >validate(</span>values: { email: string; password: string }) {
-  let errors: { email?: string; password?: string } = <span class="cstat-no" title="statement not covered" >{};</span>
+export default function validate(values: { email: string; password: string }) {
+  let errors: { email?: string; password?: string } = {};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!values.email) {</span>
-<span class="cstat-no" title="statement not covered" >    errors.email = "Email address is required";</span>
-  } else <span class="cstat-no" title="statement not covered" >if (!emailRegexTest(values.email)) {</span>
-<span class="cstat-no" title="statement not covered" >    errors.email = "Email address is invalid";</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!values.email) {
+<span class="cstat-no" title="statement not covered" >    errors.email = getFormError("EMAIL_REQUIRED");</span>
+  } else if (!emailRegexTest(values.email)) {
+    errors.email = getFormError("EMAIL_INVALID");
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!values.password) {</span>
-<span class="cstat-no" title="statement not covered" >    errors.password = "Password is required";</span>
-  } else <span class="cstat-no" title="statement not covered" >if (values.password.length &lt; 8) {</span>
-<span class="cstat-no" title="statement not covered" >    errors.password = "Password must be 8 or more characters";</span>
+  const passwordLength = getInAppConfigs("MIN_PASSWORD_LENGTH");
+  if (!values.password) {
+    errors.password = getFormError("PASSWORD_REQUIRED");
+  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (values.password.length &lt; passwordLength) {
+<span class="cstat-no" title="statement not covered" >    errors.password = getFormError("PASSWORD_SHORT", passwordLength);</span>
   }
-<span class="cstat-no" title="statement not covered" >  return errors;</span>
+&nbsp;
+  return errors;
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -106,7 +118,7 @@ export default function <span class="fstat-no" title="function not covered" >val
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 16 2019 21:39:50 GMT+0300 (GMT+03:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri May 17 2019 17:34:10 GMT+0300 (GMT+03:00)
 </div>
 </div>
 <script src="../../prettify.js"></script>

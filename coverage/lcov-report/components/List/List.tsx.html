@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/Select/Select.tsx</title>
+    <title>Code coverage report for components/List/List.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">components/Select</a> Select.tsx
+      <a href="../../index.html">All files</a> / <a href="index.html">components/List</a> List.tsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -25,9 +25,9 @@
         <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -74,11 +74,7 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -97,40 +93,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ReactNode } from "react";
-import { Picker } from "react-native";
+import { FlatList } from "react-native";
+import ListItem from "./ListItem/ListItem";
+&nbsp;
+import { TouchableHighlight } from "react-native";
 import styled from "styled-components";
 &nbsp;
 interface Props {
+  data: Array&lt;object&gt;;
   style?: {};
-  selectedValue?: string;
-  onValueChange: () =&gt; void;
-  items?: { value: string; label: string }[];
+  RenderedElement?: any;
 }
 &nbsp;
-export default function Select({
-  items = <span class="branch-0 cbranch-no" title="branch not covered" >[],</span>
-  onValueChange,
-  selectedValue,
-  style
-}: Props) {
+export default function List({ RenderedElement, data, style }: Props) {
   return (
-    &lt;Picker
-      selectedValue={selectedValue}
+    &lt;FlatList
+      data={data}
       style={style}
-      onValueChange={onValueChange}
-    &gt;
-      {items.map(item =&gt; (
-        &lt;Picker.Item label={item.label} value={item.value} /&gt;
-      ))}
-    &lt;/Picker&gt;
+      renderItem={({ item }) =&gt;
+        RenderedElement ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >          &lt;RenderedElement item={item} /&gt;</span>
+        ) : (
+          &lt;ListItem item={item} /&gt;
+        )
+      }
+    /&gt;
   );
 }
 &nbsp;</pre></td></tr>

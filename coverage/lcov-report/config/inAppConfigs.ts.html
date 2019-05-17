@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for config/strings.ts</title>
+    <title>Code coverage report for config/inAppConfigs.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">config</a> strings.ts
+      <a href="../index.html">All files</a> / <a href="index.html">config</a> inAppConfigs.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -55,10 +55,7 @@
 <a name='L7'></a><a href='#L7'>7</a>
 <a name='L8'></a><a href='#L8'>8</a>
 <a name='L9'></a><a href='#L9'>9</a>
-<a name='L10'></a><a href='#L10'>10</a>
-<a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<a name='L10'></a><a href='#L10'>10</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -67,21 +64,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const strings = {
-  LOGIN: "Log In",
-  WELCOME_TO_LOGIN: "Welcome to the login screen!",
-  EMAIL_PLACEHOLDER: "Email",
-  PASSWORD_PLACEHOLDER: "Password",
-  MOBILE_NUMBER_PLACEHOLDER: "Mobile Number",
-  NAME_PLACEHOLDER: "Name",
-  REGISTER: "Register",
-  JOIN_HERE: "Join Here"
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const inAppConfig = {
+  REGISTER_NUMBER_IS_REQUIRED: false,
+  REGISTER_FULLNAME_IS_REQUIRED: true,
+  MIN_PASSWORD_LENGTH: 8,
+  MIN_FULLNAME_LENGTH: 8,
+  COUNTRY_CODE: "tr"
 };
 &nbsp;
-export default strings;
+export default inAppConfig;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
