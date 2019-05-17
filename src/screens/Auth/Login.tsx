@@ -44,7 +44,7 @@ const LoginScreen = ({
       </Button>
       <Button
         onPress={() => {
-          navigation.push("Register");
+          navigation.replace("Register");
         }}
       >
         <Text>Dont have an account? Join here !</Text>
