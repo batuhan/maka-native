@@ -1,4 +1,6 @@
-import { emailRegexTest, trPhoneNumberRegexTest } from "../functions/regex";
+import { getFormError } from "../functions/errors";
+import { getInAppConfigs } from "../functions/configs";
+import { emailRegexTest, mobileNumberRegexTest } from "../functions/regex";
 
 export default function validate(values: {
   email: string;
@@ -14,27 +16,34 @@ export default function validate(values: {
   } = {};
 
   if (!values.email) {
-    errors.email = "Email address is required";
+    errors.email = getFormError("EMAIL_REQUIRED");
   } else if (!emailRegexTest(values.email)) {
-    errors.email = "Email address is invalid";
+    errors.email = getFormError("EMAIL_INVALID");
   }
 
+  const passwordLength = getInAppConfigs("MIN_PASSWORD_LENGTH");
   if (!values.password) {
-    errors.password = "Password is required";
-  } else if (values.password.length < 8) {
-    errors.password = "Password must be 8 or more characters";
+    errors.password = getFormError("PASSWORD_REQUIRED");
+  } else if (values.password.length < passwordLength) {
+    errors.password = getFormError("PASSWORD_SHORT", passwordLength);
   }
 
-  if (!values.mobileNumber) {
-    errors.mobileNumber = "Mobile number is required";
-  } else if (!trPhoneNumberRegexTest(values.mobileNumber)) {
-    errors.email = "Mobile number is invalid";
+  if (getInAppConfigs("REGISTER_NUMBER_IS_REQUIRED")) {
+    const countryCode = getInAppConfigs("COUNTRY_CODE");
+    if (!values.mobileNumber) {
+      errors.mobileNumber = getFormError("MOBILE_NUMBER_REQUIRED");
+    } else if (!mobileNumberRegexTest(countryCode, values.mobileNumber)) {
+      errors.mobileNumber = getFormError("MOBILE_NUMBER_INVALID");
+    }
   }
 
-  if (!values.fullname) {
-    errors.fullname = "Name is required";
-  } else if (values.fullname.trim().length < 6) {
-    errors.email = "Name is invalid";
+  if (getInAppConfigs("REGISTER_FULLNAME_IS_REQUIRED")) {
+    const fullnameLength = getInAppConfigs("MIN_FULLNAME_LENGTH");
+    if (!values.fullname) {
+      errors.fullname = getFormError("FULLNAME_REQUIRED");
+    } else if (values.fullname.trim().length < fullnameLength) {
+      errors.fullname = getFormError("FULLNAME_INVALID");
+    }
   }
 
   return errors;
