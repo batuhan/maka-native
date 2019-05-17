@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { View, Text } from "react-native";
 
-export default class Home extends Component {
-  render() {
-    return (
-      <View>
-        <Text>Home</Text>
-      </View>
-    );
-  }
+interface Props {}
+
+export default function Home({  }: Props) {
+  return (
+    <View>
+      <Text>Home</Text>
+    </View>
+  );
 }

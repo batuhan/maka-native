@@ -1,19 +1,13 @@
-import React, { ReactNode } from "react";
-import { ListItem, ListItemProps } from "react-native-elements";
+import React from "react";
+import { Text } from "react-native";
 
-import { TouchableHighlight } from "react-native";
 import styled from "styled-components";
 
 interface Props {
-  ListItemProps?: ListItemProps;
-  item?: { name: string };
+  item?: {};
   style?: {};
 }
 
-export default function ListItemComponent({
-  item,
-  style,
-  ListItemProps
-}: Props) {
-  return <ListItem {...ListItemProps} />;
+export default function ListItemComponent({ item, style }: Props) {
+  return <Text>{JSON.stringify(item)}</Text>;
 }

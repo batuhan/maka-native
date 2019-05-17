@@ -8,7 +8,7 @@
  * @format
  */
 
-import React, { Component } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 import { View, StyleSheet, StatusBar } from "react-native";
 
@@ -20,17 +20,15 @@ const store = createStore();
 
 interface Props {}
 
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <Provider store={store}>
-        <View style={styles.container}>
-          <StatusBar barStyle="default" />
-          <AppNavigator />
-        </View>
-      </Provider>
-    );
-  }
+export default function App({  }: Props) {
+  return (
+    <Provider store={store}>
+      <View style={styles.container}>
+        <StatusBar barStyle="default" />
+        <AppNavigator />
+      </View>
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({

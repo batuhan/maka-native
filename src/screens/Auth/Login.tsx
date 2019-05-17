@@ -22,7 +22,6 @@ const LoginScreen = ({
     login,
     validate
   );
-  console.log(errors);
   return (
     <View>
       <FormInput

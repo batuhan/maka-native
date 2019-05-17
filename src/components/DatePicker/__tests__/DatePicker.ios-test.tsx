@@ -4,7 +4,7 @@ import { DatePickerIOSProps } from "react-native";
 import DatePicker from "../DatePicker.ios";
 
 describe("DatePickerIos", () => {
-  const date = new Date();
+  const date = new Date("2019-11-11");
   const onDateChange = jest.fn();
   const props: DatePickerIOSProps | any = {
     onDateChange,
