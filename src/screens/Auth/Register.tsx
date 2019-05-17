@@ -4,8 +4,10 @@ import { connect } from "react-redux";
 
 import useForm from "../../lib/components/useForm";
 import validate from "../../lib/validations/registerForm";
+import { getInAppConfigs } from "../../lib/functions/configs";
 
 import { fetchRegisterRequest } from "../../modules/auth/actions";
+
 import strings from "../../config/strings";
 
 import Button from "../../components/Button/Button";
@@ -42,10 +44,20 @@ const RegisterScreen = ({
       <FormInput
         name="password"
         value={values.password}
-        error={values.password}
+        error={errors.password}
         onChangeText={handleChange}
         placeholder={strings.PASSWORD_PLACEHOLDER}
       />
+      {(getInAppConfigs("REGISTER_NUMBER_IS_REQUIRED") && (
+        <FormInput
+          name="mobileNumber"
+          value={values.mobileNumber}
+          error={errors.mobileNumber}
+          onChangeText={handleChange}
+          placeholder={strings.MOBILE_NUMBER_PLACEHOLDER}
+        />
+      )) ||
+        null}
       <Button onPress={handleSubmit}>
         <Text>{strings.REGISTER}</Text>
       </Button>

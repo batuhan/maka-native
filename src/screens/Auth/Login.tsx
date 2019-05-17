@@ -22,6 +22,7 @@ const LoginScreen = ({
     login,
     validate
   );
+  console.log(errors);
   return (
     <View>
       <FormInput
@@ -34,7 +35,7 @@ const LoginScreen = ({
       <FormInput
         name="password"
         value={values.password}
-        error={values.password}
+        error={errors.password}
         onChangeText={handleChange}
         placeholder={strings.PASSWORD_PLACEHOLDER}
       />

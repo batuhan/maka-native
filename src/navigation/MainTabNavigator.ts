@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { Login, Register } from "../screens/Auth";
 import Home from "../screens/Home";
@@ -11,17 +11,37 @@ import {
 
 const AuthNavigator = createStackNavigator(
   {
-    Login: { screen: Login },
-    Register: { screen: Register }
+    Login: {
+      screen: Login,
+      navigationOptions: () => ({
+        title: "Login"
+      })
+    },
+    Register: {
+      screen: Register,
+      navigationOptions: () => ({
+        title: "Register"
+      })
+    }
   },
   {
-    headerMode: "none"
+    //headerMode: "none"
   }
 );
 
-const HomeStackNavigator = createStackNavigator({
-  Home: { screen: Home }
-});
+const HomeStackNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: Home,
+      navigationOptions: () => ({
+        headerTitle: "Home"
+      })
+    }
+  },
+  {
+    //headerMode: "none"
+  }
+);
 
 const AppNavigator = createDrawerNavigator(
   {
