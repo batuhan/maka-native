@@ -10,7 +10,7 @@ type Props = {
   style?: {};
   name: string;
   placeholder: string;
-  keyboardType?: KeyboardTypeOptions;
+  keyboardType: KeyboardTypeOptions;
 };
 
 export default function FormInput({
