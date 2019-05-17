@@ -1,7 +1,6 @@
 # Maka Native
 [![Dependency Status](https://david-dm.org/nodgroup/maka-native.svg)]()
 [![devDependency Status](https://david-dm.org/nodgroup/maka-native/dev-status.svg)]()
-[![Code Climate](https://codeclimate.com/github/nodgroup/maka-native/badges/gpa.svg)](https://codeclimate.com/github/nodgroup/maka-native)
 [![GitHub issues](https://img.shields.io/github/issues/nodgroup/maka-native.svg)](https://github.com/nodgroup/maka-native/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nodgroup/maka-native/master/LICENSE)
 ___
