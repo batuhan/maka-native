@@ -21,10 +21,6 @@ const store = createStore();
 interface Props {}
 
 export default class App extends Component<Props> {
-  state = {
-    isLoading: true
-  };
-
   render() {
     return (
       <Provider store={store}>

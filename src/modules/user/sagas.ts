@@ -14,10 +14,10 @@ function* userFetch() {
   }
 }
 
-export function* userWatcher({ payload }: any) {
+export function* userWatcher() {
   yield call(userFetch);
 }
 
-export default function* watchUserAuthentication() {
+export function* watchUser() {
   yield takeEvery(UserActionTypes.USER_REQUEST, userFetch);
 }

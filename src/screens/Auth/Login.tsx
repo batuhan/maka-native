@@ -11,12 +11,17 @@ import strings from "../../config/strings";
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
 
-const LoginScreen = ({ login }: { login: () => void }) => {
+const LoginScreen = ({
+  login,
+  navigation
+}: {
+  login: () => void;
+  navigation: any;
+}) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     login,
     validate
   );
-
   return (
     <View>
       <FormInput
@@ -36,6 +41,13 @@ const LoginScreen = ({ login }: { login: () => void }) => {
       <Button onPress={handleSubmit}>
         <Text>{strings.LOGIN}</Text>
       </Button>
+      <Button
+        onPress={() => {
+          navigation.push("Register");
+        }}
+      >
+        <Text>Dont have an account? Join here !</Text>
+      </Button>
     </View>
   );
 };
@@ -44,11 +56,12 @@ const mapStateToProps = (response: any) => {
   return response.authReducer;
 };
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, props: any) => {
   return {
-    login: (email: string, password: string) => {
-      dispatch(fetchLoginRequest({ email, password }));
-    }
+    login: (data: { email: string; password: string }) => {
+      dispatch(fetchLoginRequest(data));
+    },
+    navigation: props.navigation
   };
 };
 

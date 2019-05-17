@@ -19,12 +19,17 @@ function* loginFetch(data: { email: string; password: string }) {
   }
 }
 
-function* registerFetch(data: { email: string; password: string }) {
+function* registerFetch(data: {
+  email: string;
+  password: string;
+  fullname: string;
+}) {
   try {
     const { profile, idToken } = yield call(
       register,
       data.email,
-      data.password
+      data.password,
+      data.fullname
     );
     yield put(fetchRegisterSuccess({ profile, idToken }));
   } catch (error) {
@@ -34,10 +39,16 @@ function* registerFetch(data: { email: string; password: string }) {
 
 export function* loginWatcher({ payload }: any) {
   yield call(loginFetch, payload);
+}
+
+export function* registerWatcher({ payload }: any) {
   yield call(registerFetch, payload);
 }
 
-export default function* watchUserAuthentication() {
-  yield takeEvery(AuthActionTypes.LOGIN_REQUEST, loginWatcher);
-  //yield takeEvery(AuthActionTypes.LOGIN_REQUEST, registerFetch);
+export function* watchUserLogin() {
+  yield takeEvery(AuthActionTypes.LOGIN_REQUEST as any, loginWatcher);
+}
+
+export function* watchUserRegister() {
+  yield takeEvery(AuthActionTypes.REGISTER_REQUEST as any, registerFetch);
 }
