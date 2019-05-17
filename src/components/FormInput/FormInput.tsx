@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TextInput, View, Text } from "react-native";
+import { StyleSheet, TextInput, View, Text, KeyboardTypeOptions } from "react-native";
 
 import styled from "styled-components";
 
@@ -10,6 +10,7 @@ type Props = {
   style?: {};
   name: string;
   placeholder: string;
+  keyboardType: KeyboardTypeOptions;
 };
 
 export default function FormInput({
@@ -18,7 +19,8 @@ export default function FormInput({
   value,
   onChangeText,
   name,
-  placeholder
+  placeholder,
+  keyboardType
 }: Props) {
   return (
     <View>
@@ -27,6 +29,7 @@ export default function FormInput({
         value={value}
         placeholder={placeholder}
         onChangeText={(value: string) => onChangeText(name, value)}
+        keyboardType={keyboardType}
       />
       {(error && <Text style={styles.error}>{error}</Text>) || null}
     </View>

@@ -30,6 +30,7 @@ const LoginScreen = ({
         error={errors.email}
         onChangeText={handleChange}
         placeholder={strings.EMAIL_PLACEHOLDER}
+        keyboardType="email-address"
       />
       <FormInput
         name="password"
@@ -37,6 +38,7 @@ const LoginScreen = ({
         error={errors.password}
         onChangeText={handleChange}
         placeholder={strings.PASSWORD_PLACEHOLDER}
+        keyboardType="default"
       />
       <Button onPress={handleSubmit}>
         <Text>{strings.LOGIN}</Text>

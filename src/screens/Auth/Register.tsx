@@ -33,6 +33,7 @@ const RegisterScreen = ({
         error={errors.email}
         onChangeText={handleChange}
         placeholder={strings.EMAIL_PLACEHOLDER}
+        keyboardType="email-address"
       />
       <FormInput
         name="fullname"
@@ -40,6 +41,7 @@ const RegisterScreen = ({
         error={errors.fullname}
         onChangeText={handleChange}
         placeholder={strings.NAME_PLACEHOLDER}
+        keyboardType="default"
       />
       <FormInput
         name="password"
@@ -47,6 +49,7 @@ const RegisterScreen = ({
         error={errors.password}
         onChangeText={handleChange}
         placeholder={strings.PASSWORD_PLACEHOLDER}
+        keyboardType="default"
       />
       {(getInAppConfigs("REGISTER_NUMBER_IS_REQUIRED") && (
         <FormInput
@@ -55,6 +58,7 @@ const RegisterScreen = ({
           error={errors.mobileNumber}
           onChangeText={handleChange}
           placeholder={strings.MOBILE_NUMBER_PLACEHOLDER}
+          keyboardType="phone-pad"
         />
       )) ||
         null}
