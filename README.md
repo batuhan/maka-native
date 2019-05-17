@@ -22,11 +22,11 @@ We also prefer [Yarn](https://yarnpkg.com/lang/en/) but it's not required. Feel 
 
 ## Project structure
 
-- [assets](./src/assets): Everything static like fonts, images, videos or static HTML files you may have goes here
-    - [assets/fonts](./src/assets/auth): This is where you’ll find the functions like sign-in, sign-out
-    - [assets/images](./src/assets/images): This is where you’ll find the functions like sign-in, sign-out
-    - [assets/html](./src/assets/html): Any static page you'll use in a WebView goes here
-- [components](./src/components): Stateless React components you'll use through the app. We even added a few common components for you. 
+- [assets](./src/assets) _Everything static like fonts, images, videos or static HTML files you may have goes here_
+    - [assets/fonts](./src/assets/fonts)
+    - [assets/images](./src/assets/images)
+    - [assets/html](./src/assets/html) _Any static page you'll use in a WebView goes here_
+- [components](./src/components) _Stateless React components you'll use through the app. We even added a few common and generic components for you_
     - [components/Alert](./src/components/Alert)
     - [components/Button](./src/components/Button)
     - [components/Container](./src/components/Container)
@@ -38,15 +38,15 @@ We also prefer [Yarn](https://yarnpkg.com/lang/en/) but it's not required. Feel 
     - [components/Select](./src/components/Select)
     - [components/Spinner](./src/components/Spinner)
     - [components/Switch](./src/components/Switch)
-- [modules](./src/modules): Any code that’s used in multiple places or the ones not directly engaging with the view layer should be here. See the section below to find out how we structure modules.
+- [modules](./src/modules) _See the section below for details_
     - [modules/auth](./src/modules/auth)
     - [modules/user](./src/modules/user)
-- [screens](./src/screens): Screens are like containers but for native applications.
-- [modules](./src/modules): Redux modules. Details are explained in the next section.
-- [storybook](./storybook): Storybooks.
-- [store](./src/store): Redux-related code are kept here.
-- [Setup.js](./src/Setup.js): Where we connect the store and setup React. We also configure Microsoft’s code-push here.
-- [App.js](./src/App.js): The main React component is here. Try to keep it stateless. 
+- [screens](./src/screens) _Screens are like containers but for native applications_
+- [modules](./src/modules) _Redux modules. Details are explained in the next section_
+- [storybook](./storybook) _Storybooks_
+- [store](./src/store) _Redux-related code are kept here_
+- [Setup.js](./src/Setup.js) _Where we connect the store and setup React. We also configure Microsoft’s code-push here_
+- [App.js](./src/App.js) _The main React component is here. Try to keep it stateless._
 
 ### Modules & module structures in Maka 
 
