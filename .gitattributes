@@ -1,1 +1,2 @@
 *.pbxproj -text
+coverage/* linguist-vendored

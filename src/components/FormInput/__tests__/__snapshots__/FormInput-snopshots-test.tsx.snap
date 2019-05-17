@@ -1,21 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormInput Rendering should match to snapshot 1`] = `
-<TextInput
-  allowFontScaling={true}
-  onChangeText={[Function]}
-  placeholder="form input placeholder"
-  rejectResponderTermination={true}
-  style={
-    Array [
-      Object {
-        "borderBottomWidth": 0.5,
-        "height": 40,
-        "marginBottom": 20,
-      },
-      undefined,
-    ]
-  }
-  underlineColorAndroid="transparent"
-/>
+<View>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="form input placeholder"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 0.5,
+          "height": 40,
+          "marginBottom": 5,
+        },
+        undefined,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
 `;

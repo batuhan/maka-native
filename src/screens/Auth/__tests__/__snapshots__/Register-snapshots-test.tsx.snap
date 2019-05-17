@@ -3,57 +3,63 @@
 exports[`Register renders correctly 1`] = `
 Array [
   <View>
-    <TextInput
-      allowFontScaling={true}
-      onChangeText={[Function]}
-      placeholder="Email"
-      rejectResponderTermination={true}
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 0.5,
-            "height": 40,
-            "marginBottom": 20,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
-    <TextInput
-      allowFontScaling={true}
-      onChangeText={[Function]}
-      placeholder="Name"
-      rejectResponderTermination={true}
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 0.5,
-            "height": 40,
-            "marginBottom": 20,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
-    <TextInput
-      allowFontScaling={true}
-      onChangeText={[Function]}
-      placeholder="Password"
-      rejectResponderTermination={true}
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 0.5,
-            "height": 40,
-            "marginBottom": 20,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+    <View>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Email"
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 0.5,
+              "height": 40,
+              "marginBottom": 5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Name"
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 0.5,
+              "height": 40,
+              "marginBottom": 5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Password"
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 0.5,
+              "height": 40,
+              "marginBottom": 5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
     <View
       accessible={true}
       isTVSelectable={true}

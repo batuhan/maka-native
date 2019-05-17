@@ -6,9 +6,9 @@ import { TouchableHighlight } from "react-native";
 import styled from "styled-components";
 
 interface Props {
-  data: [];
+  data: Array<object>;
   style?: {};
-  RenderedElement: any;
+  RenderedElement?: any;
 }
 
 export default function List({ RenderedElement, data, style }: Props) {

@@ -13,6 +13,7 @@ const createTestProps = (props: Object) => ({
 });
 
 describe("App", () => {
+  it("should ", () => {});
   // let wrapper: ShallowWrapper;
   // let props: any; // use type "any" to opt-out of type-checking
   // beforeEach(() => {

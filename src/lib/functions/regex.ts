@@ -3,7 +3,11 @@ export const emailRegexTest = (email: string) => {
   return emailRegex.test(email);
 };
 
-export const trPhoneNumberRegexTest = (trNumber: string) => {
-  const trNumberRegex = /(([\+]90?)|([0]?))([ ]?)((\([0-9]{3}\))|([0-9]{3}))([ ]?)([0-9]{3})(\s*[\-]?)([0-9]{2})(\s*[\-]?)([0-9]{2})/;
-  return trNumberRegex.test(trNumber);
+const numberRegexes = {
+  tr: /(([\+]90?)|([0]?))([ ]?)((\([0-9]{3}\))|([0-9]{3}))([ ]?)([0-9]{3})(\s*[\-]?)([0-9]{2})(\s*[\-]?)([0-9]{2})/
+};
+
+export const mobileNumberRegexTest = (countryCode: string, number: string) => {
+  const regex = (<any>numberRegexes)[countryCode];
+  return (regex && regex.test(number)) || false;
 };

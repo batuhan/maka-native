@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TextInput } from "react-native";
+import { StyleSheet, TextInput, View, Text } from "react-native";
 
 import styled from "styled-components";
 
@@ -21,12 +21,15 @@ export default function FormInput({
   placeholder
 }: Props) {
   return (
-    <TextInput
-      style={[styles.textInput, style]}
-      value={value}
-      placeholder={placeholder}
-      onChangeText={(value: string) => onChangeText(name, value)}
-    />
+    <View>
+      <TextInput
+        style={[styles.textInput, style]}
+        value={value}
+        placeholder={placeholder}
+        onChangeText={(value: string) => onChangeText(name, value)}
+      />
+      {(error && <Text style={styles.error}>{error}</Text>) || null}
+    </View>
   );
 }
 
@@ -34,6 +37,10 @@ const styles = StyleSheet.create({
   textInput: {
     height: 40,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    marginBottom: 20
+    marginBottom: 5
+  },
+  error: {
+    color: "red",
+    marginBottom: 10
   }
 });

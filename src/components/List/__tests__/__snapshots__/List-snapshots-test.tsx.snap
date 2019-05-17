@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Rendering should match to snapshot 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "key": 1,
+        "value": "1",
+      },
+      Object {
+        "key": 2,
+        "value": "2",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <Text>
+        {"key":1,"value":"1"}
+      </Text>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <Text>
+        {"key":2,"value":"2"}
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
