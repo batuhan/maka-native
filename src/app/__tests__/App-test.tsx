@@ -3,7 +3,7 @@ import { View } from "react-native";
 
 import { shallow, ShallowWrapper } from "enzyme";
 
-import App from "../App";
+import App from "../../../App";
 
 const createTestProps = (props: Object) => ({
   navigation: {

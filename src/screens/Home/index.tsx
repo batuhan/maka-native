@@ -1,12 +1,3 @@
-import React from "react";
-import { View, Text } from "react-native";
+import Home from "./Home";
 
-interface Props {}
-
-export default function Home({  }: Props) {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  );
-}
+export { Home };

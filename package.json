@@ -8,6 +8,7 @@
     "storybook": "watch rnstl ./src --wait=100 | storybook start | yarn start --projectRoot storybook --watchFolders $PWD"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.4.0",
     "@types/react-redux": "^7.0.9",
     "@types/styled-components": "^4.1.14",
     "react": "16.8.3",

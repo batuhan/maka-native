@@ -1,4 +1,5 @@
 import { action } from "typesafe-actions";
+
 import { AuthActionTypes } from "./types";
 
 export const fetchLoginRequest = (data: any) =>
@@ -18,5 +19,13 @@ export const fetchRegisterSuccess = (data: any) => {
 };
 export const fetchRegisterError = (message: string) =>
   action(AuthActionTypes.REGISTER_FAILURE, message);
+
+export const fetchAuthRequest = () => action(AuthActionTypes.AUTH_REQUEST);
+
+export const fetchAuthSuccess = (authStatus: boolean) => {
+  return action(AuthActionTypes.AUTH_SUCCESS, authStatus);
+};
+export const fetchAuthError = (message: string) =>
+  action(AuthActionTypes.AUTH_FAILURE, message);
 
 export const logout = () => action(AuthActionTypes.LOGOUT);

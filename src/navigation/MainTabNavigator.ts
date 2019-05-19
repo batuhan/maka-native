@@ -1,7 +1,8 @@
 import * as React from "react";
 
+import { Home } from "../screens/Home";
+import { Profile } from "../screens/Profile";
 import { Login, Register } from "../screens/Auth";
-import Home from "../screens/Home";
 
 import {
   createBottomTabNavigator,
@@ -9,8 +10,21 @@ import {
   createDrawerNavigator
 } from "react-navigation";
 
-const AuthNavigator = createStackNavigator(
+const HomeStackNavigator = createStackNavigator(
   {
+    Home: {
+      screen: Home,
+      navigationOptions: () => ({
+        headerTitle: "Home"
+      })
+    },
+    Profile: {
+      screen: Profile,
+      navigationOptions: () => ({
+        headerTitle: "Profile"
+      })
+    },
+
     Login: {
       screen: Login,
       navigationOptions: () => ({
@@ -29,36 +43,12 @@ const AuthNavigator = createStackNavigator(
   }
 );
 
-const HomeStackNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: Home,
-      navigationOptions: () => ({
-        headerTitle: "Home"
-      })
-    }
-  },
-  {
-    //headerMode: "none"
-  }
-);
-
-const AppNavigator = createDrawerNavigator(
-  {
-    Home: { screen: HomeStackNavigator }
-  },
-  {
-    // contentComponent: Home
-  }
-);
-const BottomNavigator = createBottomTabNavigator(
-  {
-    Home: AppNavigator,
-    Profile: AuthNavigator
-  },
-  {
-    initialRouteName: "Home"
-  }
-);
+const AppNavigator = createDrawerNavigator({
+  Home: { screen: HomeStackNavigator }
+});
+const BottomNavigator = createBottomTabNavigator({
+  Home: AppNavigator,
+  Profile: AppNavigator
+});
 
 export default BottomNavigator;

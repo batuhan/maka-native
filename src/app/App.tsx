@@ -1,35 +1,48 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/emin93/react-native-template-typescript
- *
- * @format
- */
-
 import React from "react";
-import { Provider } from "react-redux";
+import { connect } from "react-redux";
 import { View, StyleSheet, StatusBar } from "react-native";
 
-import createStore from "../store";
+import { fetchAuthRequest } from "../modules/auth/actions";
 
 import AppNavigator from "../navigation/AppNavigator";
+import Spinner from "../components/Spinner/Spinner";
 
-const store = createStore();
+interface Props {
+  auth: { isAuthenticated: boolean; loading: boolean };
+}
 
-interface Props {}
+function App({ auth }: Props) {
+  const {
+    isAuthenticated,
+    loading
+  }: { isAuthenticated: boolean; loading: boolean } = auth;
 
-export default function App({  }: Props) {
   return (
-    <Provider store={store}>
+    (loading && <Spinner />) || (
       <View style={styles.container}>
         <StatusBar barStyle="default" />
-        <AppNavigator />
+        <AppNavigator screenProps={{ isAuthenticated }} />
       </View>
-    </Provider>
+    )
   );
 }
+
+const mapStateToProps = (state: any) => {
+  return {
+    auth: state.authReducer
+  };
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    isAuthenticated: dispatch(fetchAuthRequest())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
 
 const styles = StyleSheet.create({
   container: {
