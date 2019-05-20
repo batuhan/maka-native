@@ -10,7 +10,7 @@ type Props = {
   style?: {};
   name: string;
   placeholder: string;
-  keyboardType: KeyboardTypeOptions;
+  keyboardType?: KeyboardTypeOptions;
 };
 
 export default function FormInput({
@@ -29,7 +29,7 @@ export default function FormInput({
         value={value}
         placeholder={placeholder}
         onChangeText={(value: string) => onChangeText(name, value)}
-        keyboardType={keyboardType}
+        keyboardType={keyboardType || "default"}
       />
       {(error && <Text style={styles.error}>{error}</Text>) || null}
     </View>
