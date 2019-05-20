@@ -10,6 +10,7 @@ import strings from "../../config/strings";
 
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
+import Container from "../../components/Container/Container";
 
 const LoginScreen = ({
   login,
@@ -23,7 +24,7 @@ const LoginScreen = ({
     validate
   );
   return (
-    <View>
+    <Container padding="3%">
       <FormInput
         name="email"
         value={values.email}
@@ -50,7 +51,7 @@ const LoginScreen = ({
       >
         <Text>Dont have an account? Join here !</Text>
       </Button>
-    </View>
+    </Container>
   );
 };
 
