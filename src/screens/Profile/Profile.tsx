@@ -27,7 +27,7 @@ function Profile({ navigation, logOut }: Props) {
       )) || (
         <Button
           onPress={() => {
-            navigation.replace("Login");
+            navigation.navigate("Login");
           }}
         >
           <Text>Please Login</Text>

@@ -67,7 +67,7 @@ const RegisterScreen = ({
       </Button>
       <Button
         onPress={() => {
-          navigation.replace("Login");
+          navigation.navigate("Login");
         }}
       >
         <Text>Already have an account? Sign in!</Text>
