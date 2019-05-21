@@ -5,7 +5,7 @@ import { View, StyleSheet, StatusBar } from "react-native";
 import { fetchAuthRequest } from "../modules/auth/actions";
 
 import AppNavigator from "../navigation/AppNavigator";
-import Spinner from "../components/Spinner/Spinner";
+import Spinner from "../elements/Spinner/Spinner";
 
 interface Props {
   auth: { isAuthenticated: boolean; loading: boolean };

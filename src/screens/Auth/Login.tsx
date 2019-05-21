@@ -8,9 +8,9 @@ import validate from "../../lib/validations/loginForm";
 import { fetchLoginRequest } from "../../modules/auth/actions";
 import strings from "../../config/strings";
 
-import Button from "../../components/Button/Button";
-import FormInput from "../../components/FormInput/FormInput";
-import Container from "../../components/Container/Container";
+import Button from "../../elements/Button/Button";
+import FormInput from "../../elements/FormInput/FormInput";
+import Container from "../../elements/Container/Container";
 
 const LoginScreen = ({
   login,

@@ -3,8 +3,8 @@ import { mount, shallow } from "enzyme";
 import { View, Text } from "react-native";
 
 import useForm from "../useForm";
-import FormInput from "../../../components/FormInput/FormInput";
-import Button from "../../../components/Button/Button";
+import FormInput from "../../../elements/FormInput/FormInput";
+import Button from "../../../elements/Button/Button";
 
 const mockCallback = jest.fn();
 const mockValidate = jest.fn();

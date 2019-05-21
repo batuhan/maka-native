@@ -2,7 +2,7 @@ export { Home };
 
 import React from "react";
 import { Text } from "react-native";
-import Container from "../../components/Container/Container";
+import Container from "../../elements/Container/Container";
 
 interface Props {}
 
