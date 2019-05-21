@@ -1,49 +1,54 @@
-import React from "react";
-import { StyleSheet, TextInput, View, Text, KeyboardTypeOptions } from "react-native";
+import React from 'react'
+import {
+  StyleSheet,
+  TextInput,
+  View,
+  Text,
+  KeyboardTypeOptions,
+} from 'react-native'
 
-import styled from "styled-components";
+import styled from 'styled-components'
+
+const StyledInput = styled(TextInput)`
+  height: 40;
+  border-bottom-width: ${StyleSheet.hairlineWidth};
+  margin-bottom: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  padding: 5px;
+`
+
+const ErrorText = styled(Text)`
+  color: red;
+  margin-bottom: 10px;
+`
 
 type Props = {
-  error?: string;
-  value?: string;
-  onChangeText: (name: string, value: string) => void;
-  style?: {};
-  name: string;
-  placeholder: string;
-  keyboardType: KeyboardTypeOptions;
-};
+  error?: string
+  value?: string
+  onChangeText: (name: string, value: string) => void
+  name: string
+  placeholder: string
+  keyboardType?: KeyboardTypeOptions
+}
 
 export default function FormInput({
-  style,
   error,
   value,
   onChangeText,
   name,
   placeholder,
-  keyboardType
+  keyboardType,
 }: Props) {
   return (
     <View>
-      <TextInput
-        style={[styles.textInput, style]}
+      <StyledInput
         value={value}
         placeholder={placeholder}
         onChangeText={(value: string) => onChangeText(name, value)}
-        keyboardType={keyboardType}
+        keyboardType={keyboardType || 'default'}
       />
-      {(error && <Text style={styles.error}>{error}</Text>) || null}
+      {(error && <ErrorText>{error}</ErrorText>) || null}
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  textInput: {
-    height: 40,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    marginBottom: 5
-  },
-  error: {
-    color: "red",
-    marginBottom: 10
-  }
-});

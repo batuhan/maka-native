@@ -7,7 +7,7 @@ import { storiesOf } from "@storybook/react-native";
 import Container from "./Container";
 
 storiesOf("Container", module).add("Container", () => (
-  <Container>
+  <Container bgColor="#f1f1f1" padding="3%">
     <Text>Container</Text>
   </Container>
 ));

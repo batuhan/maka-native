@@ -10,10 +10,10 @@ import {
 } from "react-native";
 
 interface IProps {
-  date: Date;
+  date?: Date;
   TouchableOpacityProps?: TouchableOpacityProps;
   defaultDate?: Date;
-  DatePickerIOSProps: DatePickerIOSProps;
+  DatePickerIOSProps?: DatePickerIOSProps;
   onDateChange: (date: Date) => void;
 }
 

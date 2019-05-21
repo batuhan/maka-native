@@ -12,6 +12,7 @@ import strings from "../../config/strings";
 
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
+import Container from "../../components/Container/Container";
 
 const RegisterScreen = ({
   register,
@@ -26,7 +27,7 @@ const RegisterScreen = ({
   );
 
   return (
-    <View>
+    <Container padding="3%">
       <FormInput
         name="email"
         value={values.email}
@@ -72,7 +73,7 @@ const RegisterScreen = ({
       >
         <Text>Already have an account? Sign in!</Text>
       </Button>
-    </View>
+    </Container>
   );
 };
 
