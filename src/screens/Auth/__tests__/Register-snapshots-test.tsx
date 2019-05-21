@@ -11,9 +11,10 @@ const mockStore: any = configureStore();
 describe("Register", () => {
   it("renders correctly", () => {
     const register = jest.fn();
+    const isAuthenticated = false;
     const instance = renderer.create(
       <Provider store={mockStore(initialState)}>
-        <Register register={register} />{" "}
+        <Register register={register} isAuthenticated={isAuthenticated} />
       </Provider>
     );
 

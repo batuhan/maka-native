@@ -16,7 +16,7 @@ public class MainActivity extends ReactActivity {
         return "BBNRN";
     }
     @Override
-protected ReactActivityDelegate createReactActivityDelegate() {
+    protected ReactActivityDelegate createReactActivityDelegate() {
     return new ReactActivityDelegate(this, getMainComponentName()) {
       @Override
       protected ReactRootView createRootView() {

@@ -16,16 +16,20 @@ import Container from "../../components/Container/Container";
 
 const RegisterScreen = ({
   register,
-  navigation
+  navigation,
+  isAuthenticated
 }: {
   register: () => void;
   navigation: any;
+  isAuthenticated: boolean;
 }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     register,
     validate
   );
-
+  if (isAuthenticated) {
+    return navigation.navigate("Profile");
+  }
   return (
     <Container padding="3%">
       <FormInput
@@ -68,7 +72,7 @@ const RegisterScreen = ({
       </Button>
       <Button
         onPress={() => {
-          navigation.replace("Login");
+          navigation.navigate("Login");
         }}
       >
         <Text>Already have an account? Sign in!</Text>
@@ -77,21 +81,16 @@ const RegisterScreen = ({
   );
 };
 
-const mapStateToProps = (response: any) => {
-  return response.authReducer;
-};
-
 const mapDispatchToProps = (dispatch: any, props: any) => {
+  const { isAuthenticated } = props.screenProps || false;
   return {
     register: (data: { email: string; password: string; fullname: string }) => {
       const { email, password, fullname } = data;
       dispatch(fetchRegisterRequest({ email, password, fullname }));
     },
-    navigation: props.navigation
+    navigation: props.navigation,
+    isAuthenticated
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RegisterScreen);
+export default connect(mapDispatchToProps)(RegisterScreen);

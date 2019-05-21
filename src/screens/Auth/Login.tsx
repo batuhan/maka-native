@@ -14,11 +14,16 @@ import Container from "../../components/Container/Container";
 
 const LoginScreen = ({
   login,
-  navigation
+  navigation,
+  isAuthenticated
 }: {
   login: () => void;
   navigation: any;
+  isAuthenticated: boolean;
 }) => {
+  if (isAuthenticated) {
+    return navigation.navigate("Profile");
+  }
   const { values, errors, handleChange, handleSubmit } = useForm(
     login,
     validate
@@ -46,7 +51,7 @@ const LoginScreen = ({
       </Button>
       <Button
         onPress={() => {
-          navigation.replace("Register");
+          navigation.navigate("Register");
         }}
       >
         <Text>Dont have an account? Join here !</Text>
@@ -55,20 +60,17 @@ const LoginScreen = ({
   );
 };
 
-const mapStateToProps = (response: any) => {
-  return response.authReducer;
-};
-
 const mapDispatchToProps = (dispatch: any, props: any) => {
+  const { isAuthenticated } = props.screenProps || false;
   return {
-    login: (data: { email: string; password: string }) => {
-      dispatch(fetchLoginRequest(data));
-    },
-    navigation: props.navigation
+    login: (data: { email: string; password: string }) =>
+      dispatch(fetchLoginRequest(data)),
+    navigation: props.navigation,
+    isAuthenticated
   };
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(LoginScreen);

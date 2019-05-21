@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Spinner renders correctly 1`] = `
-<View>
+<View
+  className="sc-bdVaJa dnhtLr"
+>
   <Text>
     Loading...
   </Text>

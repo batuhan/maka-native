@@ -8,7 +8,6 @@ import { shallow, mount } from "enzyme";
 
 import Button from "../Button";
 
-
 describe("Button", () => {
   const children = <TextInput />;
   const onPress = jest.fn();
@@ -35,7 +34,6 @@ describe("Button", () => {
       onPress.mockReturnValue("trigger on press");
       const wrapper = shallow(<Button onPress={onPress}>{children}</Button>);
       wrapper.simulate("press");
-
       expect(onPress.mock.calls.length).toBe(1);
     });
   });

@@ -6,12 +6,17 @@ export const REGISTER_REQUEST = "REGISTER_REQUEST";
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAILURE = "REGISTER_FAILURE";
 
+export const AUTH_REQUEST = "AUTH_REQUEST";
+export const AUTH_SUCCESS = "AUTH_SUCCESS";
+export const AUTH_FAILURE = "AUTH_FAILURE";
+
 export const LOGOUT = "LOGOUT";
 
 export interface AuthState {
-  loading?: boolean;
+  loading: boolean;
   data: any;
   errors?: string;
+  isAuthenticated: boolean;
 }
 
 export enum AuthActionTypes {
@@ -21,5 +26,8 @@ export enum AuthActionTypes {
   REGISTER_REQUEST = "REGISTER_REQUEST",
   REGISTER_SUCCESS = "REGISTER_SUCCESS",
   REGISTER_FAILURE = "REGISTER_FAILURE",
+  AUTH_REQUEST = "AUTH_REQUEST",
+  AUTH_SUCCESS = "AUTH_SUCCESS",
+  AUTH_FAILURE = "AUTH_FAILURE",
   LOGOUT = "LOGOUT"
 }

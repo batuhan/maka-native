@@ -8,12 +8,11 @@ import { Text } from "react-native";
 
 describe("Container", () => {
   const children = <Text>Container Children</Text>;
-  
+
   describe("Rendering", () => {
     it("should match to snapshot", () => {
       const tree = renderer.create(<Container>{children}</Container>).toJSON();
       expect(tree).toMatchSnapshot();
-      expect(tree).toHaveStyleRule("background-color", "white");
     });
 
     it("should match to snapshot", () => {

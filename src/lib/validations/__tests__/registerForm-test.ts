@@ -29,7 +29,7 @@ describe("Register Form", () => {
     expect(Object.keys(errors)).toContain("fullname");
   });
 
-  it("should returnt empty object with valid email password and full name", () => {
+  it("should return empty object with valid email password and full name", () => {
     const values = {
       email: "email@gmail.com",
       password: "strongPass1234.",
