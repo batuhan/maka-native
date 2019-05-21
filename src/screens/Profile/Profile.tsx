@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { View, Text } from "react-native";
 
-import Button from "../../components/Button/Button";
+import Button from "../../elements/Button/Button";
 
 import { logout } from "../../modules/auth/actions";
 
