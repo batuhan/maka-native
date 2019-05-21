@@ -21,9 +21,8 @@ const LoginScreen = ({
   navigation: any;
   isAuthenticated: boolean;
 }) => {
-  const afterLoginSuccess = () => navigation.navigate("Profile");
   if (isAuthenticated) {
-    return afterLoginSuccess();
+    return navigation.navigate("Profile");
   }
   const { values, errors, handleChange, handleSubmit } = useForm(
     login,
@@ -62,7 +61,7 @@ const LoginScreen = ({
 };
 
 const mapDispatchToProps = (dispatch: any, props: any) => {
-  const { isAuthenticated } = props.screenProps;
+  const { isAuthenticated } = props.screenProps || false;
   return {
     login: (data: { email: string; password: string }) =>
       dispatch(fetchLoginRequest(data)),

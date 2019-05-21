@@ -4,19 +4,11 @@ exports[`FormInput Rendering should match to snapshot 1`] = `
 <View>
   <TextInput
     allowFontScaling={true}
+    className="sc-bdVaJa hAFfYc"
+    keyboardType="default"
     onChangeText={[Function]}
     placeholder="form input placeholder"
     rejectResponderTermination={true}
-    style={
-      Array [
-        Object {
-          "borderBottomWidth": 0.5,
-          "height": 40,
-          "marginBottom": 5,
-        },
-        undefined,
-      ]
-    }
     underlineColorAndroid="transparent"
   />
 </View>

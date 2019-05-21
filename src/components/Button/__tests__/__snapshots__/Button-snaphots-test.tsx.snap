@@ -2,20 +2,24 @@
 
 exports[`Button renders correctly 1`] = `
 <View
-  accessible={true}
-  isTVSelectable={true}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={Object {}}
+  className="sc-bdVaJa jJVOup"
 >
-  <Text
-    style={null}
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={Object {}}
   >
-    Touchable
-  </Text>
+    <Text
+      style={null}
+    >
+      Touchable
+    </Text>
+  </View>
 </View>
 `;

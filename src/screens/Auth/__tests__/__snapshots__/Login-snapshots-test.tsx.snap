@@ -1,78 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login renders correctly 1`] = `
-<View>
+<View
+  className="sc-bxivhb iEKEfW"
+  padding="3%"
+>
   <View>
     <TextInput
       allowFontScaling={true}
+      className="sc-bwzfXH kVIIpY"
+      keyboardType="email-address"
       onChangeText={[Function]}
       placeholder="Email"
       rejectResponderTermination={true}
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 0.5,
-            "height": 40,
-            "marginBottom": 5,
-          },
-          undefined,
-        ]
-      }
       underlineColorAndroid="transparent"
     />
   </View>
   <View>
     <TextInput
       allowFontScaling={true}
+      className="sc-bwzfXH kVIIpY"
+      keyboardType="default"
       onChangeText={[Function]}
       placeholder="Password"
       rejectResponderTermination={true}
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 0.5,
-            "height": 40,
-            "marginBottom": 5,
-          },
-          undefined,
-        ]
-      }
       underlineColorAndroid="transparent"
     />
   </View>
   <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={null}
+    className="sc-bdVaJa jJVOup"
   >
-    <Text
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={null}
     >
-      Log In
-    </Text>
+      <Text
+        style={null}
+      >
+        Log In
+      </Text>
+    </View>
   </View>
   <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={null}
+    className="sc-bdVaJa jJVOup"
   >
-    <Text
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={null}
     >
-      Dont have an account? Join here !
-    </Text>
+      <Text
+        style={null}
+      >
+        Dont have an account? Join here !
+      </Text>
+    </View>
   </View>
 </View>
 `;

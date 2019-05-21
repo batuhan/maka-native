@@ -14,11 +14,11 @@ const mockStore: any = configureStore();
 
 describe("Login", () => {
   const login = jest.fn();
-
+  const isAuthenticated = false;
   describe("Rendering", () => {
     const mock = (
       <Provider store={mockStore(initialState)}>
-        <Login login={login} />
+        <Login login={login} isAuthenticated={isAuthenticated} />
       </Provider>
     );
     it("should render textinput text and view", () => {
