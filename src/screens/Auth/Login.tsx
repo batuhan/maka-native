@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { connect } from "react-redux";
 
-import useForm from "../../lib/components/useForm";
+import useForm from "../../lib/hooks/useForm";
 import validate from "../../lib/validations/loginForm";
 
 import { fetchLoginRequest } from "../../modules/auth/actions";
