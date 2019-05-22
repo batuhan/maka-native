@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { TextInput } from "react-native";
+import { TextInput, TouchableHighlight } from "react-native";
 import { shallow, mount } from "enzyme";
 
 import Button from "../Button";
@@ -32,8 +32,14 @@ describe("Button", () => {
 
     it("should trigger onPress event", () => {
       onPress.mockReturnValue("trigger on press");
-      const wrapper = shallow(<Button onPress={onPress}>{children}</Button>);
-      wrapper.simulate("press");
+      const wrapper = shallow(
+        <Button onPress={onPress}>{children}</Button>
+      ).dive();
+      wrapper
+        .find(TouchableHighlight)
+        .first()
+        .props()
+        .onPress();
       expect(onPress.mock.calls.length).toBe(1);
     });
   });
