@@ -10,7 +10,6 @@ import {
 } from "react-native";
 
 interface IProps {
-  date?: Date;
   TouchableOpacityProps?: TouchableOpacityProps;
   defaultDate?: Date;
   DatePickerIOSProps?: DatePickerIOSProps;
@@ -18,7 +17,7 @@ interface IProps {
 }
 
 export default function DatePicker(props: IProps) {
-  const [date, setDate] = useState(props.date || new Date());
+  const [date, setDate] = useState(props.defaultDate || new Date());
   const [isOpenPicker, togglePicker] = useState(false);
 
   const { onDateChange } = props;
