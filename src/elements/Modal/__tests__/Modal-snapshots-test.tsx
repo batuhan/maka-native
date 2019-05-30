@@ -7,7 +7,7 @@ import Modal from "../Modal";
 describe("Modal", () => {
   it("renders correctly", () => {
     const instance = renderer.create(
-      <Modal isShowing={false}>
+      <Modal show={false}>
         <Text>Modal Component</Text>
       </Modal>
     );

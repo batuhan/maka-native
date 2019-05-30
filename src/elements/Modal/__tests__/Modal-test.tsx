@@ -11,7 +11,7 @@ describe("ModalComponent", () => {
   describe("Rendering", () => {
     it("should render text and view element", () => {
       const component = (
-        <ModalComponent isShowing={false}>
+        <ModalComponent show={false}>
           <Text>Modal Component</Text>
         </ModalComponent>
       );

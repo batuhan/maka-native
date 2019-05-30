@@ -5,13 +5,13 @@ import styled from "styled-components";
 import Container from "../../elements/Container/Container";
 
 export interface Props {
-  isShowing: boolean;
+  show: boolean;
   children: ReactNode;
 }
-const ModalComponent = ({ isShowing, children }: Props) => {
+const ModalComponent = ({ show, children }: Props) => {
   return (
     <Container>
-      <Modal animationType="slide" visible={isShowing} transparent={false}>
+      <Modal animationType="slide" visible={show} transparent={false}>
         {children}
       </Modal>
     </Container>

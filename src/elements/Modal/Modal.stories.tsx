@@ -11,7 +11,7 @@ const ModalContainer = () => {
   return (
     <View>
       <Text onPress={toggle}>Show popup</Text>
-      <Modal isShowing={isShowing}>
+      <Modal show={isShowing}>
         <Text onPress={toggle}>Close popup</Text>
       </Modal>
     </View>
