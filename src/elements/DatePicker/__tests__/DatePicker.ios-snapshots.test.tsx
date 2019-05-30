@@ -9,7 +9,7 @@ describe("DatePickerIos", () => {
   describe("Rendering", () => {
     it("should match to snapshot", () => {
       const props: any = {};
-      const tree = renderer.create(<DatePicker {...props} />);
+      const tree = renderer.create(<DatePicker {...props} defaultDate={new Date("2019-10-10")} />);
       expect(tree).toMatchSnapshot();
     });
   });

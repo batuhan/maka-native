@@ -7,7 +7,7 @@ describe("DatePickerAndroid", () => {
   describe("Rendering", () => {
     it("should match to snapshot", () => {
       const onDateChange = jest.fn();
-      const tree = renderer.create(<DatePicker onDateChange={onDateChange} />);
+      const tree = renderer.create(<DatePicker onDateChange={onDateChange} defaultDate={new Date("2019-10-10")} />);
       expect(tree).toMatchSnapshot();
     });
   });
