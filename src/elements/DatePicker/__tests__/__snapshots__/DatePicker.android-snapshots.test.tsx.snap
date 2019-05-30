@@ -17,7 +17,7 @@ exports[`DatePickerAndroid Rendering should match to snapshot 1`] = `
   }
 >
   <Text>
-    Tue May 21 2019
+    Thu Oct 10 2019
   </Text>
 </View>
 `;

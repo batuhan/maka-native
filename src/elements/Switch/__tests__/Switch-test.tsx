@@ -9,7 +9,7 @@ describe("Switch", () => {
       const disabled = false;
       const onValueChange = jest.fn();
       const component = mount(
-        <Switch disabled={disabled} onValueChange={onValueChange} />
+        <Switch disabled={disabled} onValueChange={onValueChange} value={true} />
       );
       const tree = component
         .children()

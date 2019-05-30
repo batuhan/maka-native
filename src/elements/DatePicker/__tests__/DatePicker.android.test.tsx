@@ -5,10 +5,10 @@ import DatePicker from "../DatePicker.android";
 
 describe("DatePickerAndroid", () => {
   const onDateChange = jest.fn();
-  
+
   describe("Rendering", () => {
     it("should render textinput and view", () => {
-      const component = mount(<DatePicker onDateChange={onDateChange} />);
+      const component = mount(<DatePicker onDateChange={onDateChange} defaultDate={new Date("2019-10-10")} />);
       const tree = component
         .children()
         .first()
@@ -18,7 +18,7 @@ describe("DatePickerAndroid", () => {
     });
 
     it("should trigger onPress event", () => {
-      const wrapper = shallow(<DatePicker onDateChange={onDateChange} />);
+      const wrapper = shallow(<DatePicker onDateChange={onDateChange} defaultDate={new Date("2019-10-10")} />);
       jest.mock("DatePickerAndroid", () => {
         open: () => {
           const action = "null";

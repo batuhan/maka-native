@@ -23,8 +23,9 @@ interface DatePickerProps {
 }
 
 export default function DatePicker(props: IProps) {
-  const [date, setDate] = useState(new Date());
   const { defaultDate, onDateChange } = props;
+  const [date, setDate] = useState(defaultDate || new Date());
+
   const openPicker = async () => {
     try {
       // TODO: refactor here

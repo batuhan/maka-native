@@ -13,7 +13,7 @@ describe("DatePickerIos", () => {
 
   describe("Rendering", () => {
     it("should render textinput and view", () => {
-      const component = mount(<DatePicker {...props} />);
+      const component = mount(<DatePicker {...props} date={new Date("2019-10-10")} />);
       const tree = component
         .children()
         .first()
@@ -23,7 +23,7 @@ describe("DatePickerIos", () => {
     });
 
     it("should trigger onPress event", () => {
-      const wrapper = shallow(<DatePicker {...props} />);
+      const wrapper = shallow(<DatePicker {...props} date={new Date("2019-10-10")} />);
       wrapper.update();
       wrapper.simulate("press");
       //trigger

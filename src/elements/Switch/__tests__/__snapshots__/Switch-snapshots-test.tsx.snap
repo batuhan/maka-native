@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image renders correctly 1`] = `
+exports[`Switch renders correctly 1`] = `
 <RCTSwitch
   accessibilityRole="button"
   disabled={false}

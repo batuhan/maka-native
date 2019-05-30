@@ -6,10 +6,11 @@ interface Props {
   style?: {};
   disabled: boolean;
   onValueChange: () => void;
+  value: boolean;
 }
 
-export default function({ disabled = false, style, onValueChange }: Props) {
+export default function({ disabled = false, style, onValueChange, value }: Props) {
   return (
-    <Switch style={style} onValueChange={onValueChange} disabled={disabled} />
+    <Switch style={style} onValueChange={onValueChange} disabled={disabled} value={value}/>
   );
 }
