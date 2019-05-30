@@ -5,12 +5,12 @@ import styled from "styled-components";
 interface Props {
   style?: {};
   disabled: boolean;
-  onValueChange: () => void;
+  onValueChange: (value: boolean) => void;
   value: boolean;
 }
 
-export default function({ disabled = false, style, onValueChange, value }: Props) {
+export default function ({ disabled = false, style, onValueChange, value }: Props) {
   return (
-    <Switch style={style} onValueChange={onValueChange} disabled={disabled} value={value}/>
+    <Switch style={style} onValueChange={onValueChange} disabled={disabled} value={value} />
   );
 }
