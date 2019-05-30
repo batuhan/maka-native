@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+<View
+  className="sc-bdVaJa kbrIhl"
+>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={false}
+    visible={false}
+  >
+    <Text>
+      Modal Component
+    </Text>
+  </Modal>
+</View>
+`;
